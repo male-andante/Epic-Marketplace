@@ -1,0 +1,19 @@
+main{
+    height: 100vh;
+    margin-top: 10vh;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .d-flex.gap-3 {
+        flex-direction: column;
+    }
+    .d-flex.gap-2 {
+        flex-direction: column;
+    }
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
