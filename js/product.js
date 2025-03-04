@@ -7,6 +7,8 @@
 
 
 const API_URL = "https://striveschool-api.herokuapp.com/api/product/";
+const auth = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2JlMDY0MjFlMTQwNjAwMTUzMTRkNDkiLCJpYXQiOjE3NDA1MDY2OTAsImV4cCI6MTc0MTcxNjI5MH0.8kHvAOjesigwMIMkQDuq5_EmUAXwbozI0biMvQwemHU"
+
 
 window.onload = fetchProductDetails;
 
@@ -26,10 +28,10 @@ async function fetchProductDetails() {
     }
 }
 
-function renderProductPage(product) {
-    document.getElementById("product-image").src = product.imageUrl;
-    document.getElementById("product-name").textContent = product.name;
-    document.getElementById("product-description").textContent = product.description;
-    document.getElementById("product-brand").textContent = product.brand;
-    document.getElementById("product-price").textContent = `${product.price}€`;
+function renderProductPage({imageUrl, name, description, brand, price}) {
+    document.getElementById("productImage").src = imageUrl;
+    document.getElementById("productName").innerText = name;
+    document.getElementById("productDescription").innerText = description;
+    document.getElementById("productBrand").innerText = brand;
+    document.getElementById("productPrice").innerText = `${price}€`;
 }
