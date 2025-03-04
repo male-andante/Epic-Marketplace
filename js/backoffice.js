@@ -36,7 +36,7 @@ window.onload = async () => {
             document.querySelector(".btn-secondary")?.remove()
         }
     } catch (error) {
-        alert("Errore nel caricamento del prodotto.")
+        alert(`${error} "Errore nel caricamento del prodotto."}`)
     }
 }
 
@@ -48,11 +48,11 @@ deleteButton?.addEventListener("click", deleteProduct)
 //! 4. Funzione POST
 async function createProduct() {
     const product = {
-        name: document.querySelector("#name").value,
-        description: document.querySelector("#description").value,
-        brand: document.querySelector("#brand").value,
-        imageUrl: document.querySelector("#imageUrl").value,
-        price: document.querySelector("#price").value,
+        name: document.getElementById("name").value,
+        description: document.getElementById("description").value,
+        brand: document.getElementById("brand").value,
+        imageUrl: document.getElementById("imageUrl").value,
+        price: document.getElementById("price").value,
     }
 
     try {
@@ -77,11 +77,11 @@ async function editProduct() {
     if (!idProduct) return alert("Nessun prodotto selezionato.")
 
     const product = {
-        name: document.querySelector("#name").value,
-        description: document.querySelector("#description").value,
-        brand: document.querySelector("#brand").value,
-        imageUrl: document.querySelector("#imageUrl").value,
-        price: document.querySelector("#price").value,
+        name: document.getElementById("name").value,
+        description: document.getElementById("description").value,
+        brand: document.getElementById("brand").value,
+        imageUrl: document.getElementById("imageUrl").value,
+        price: document.getElementById("price").value,
     }
 
     try {
